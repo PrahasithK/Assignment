@@ -121,6 +121,12 @@
             font-size: 22px;
             font-weight: bold;
         }
+
+        .error-message {
+            color: #dc3545;
+            font-family: "Roboto";
+            font-size: 14px;
+        }
     </style>
 </head>
 
@@ -350,12 +356,14 @@
                                         <input type="text" id="name" name="name" class="form-control">
                                         <label for="name" class="">Your Full name</label>
                                     </div>
+                                    <p class="error-message" id="nameErrMsg"></p>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
                                         <input type="text" id="email" name="email" class="form-control">
                                         <label for="email" class="">Your email</label>
                                     </div>
+                                    <p class="error-message" id="emailErrMsg"></p>
                                 </div>
                             </div>
                             <div class="row">
@@ -364,6 +372,7 @@
                                         <input type="text" id="subject" name="subject" class="form-control">
                                         <label for="subject" class="">Subject</label>
                                     </div>
+                                    <p class="error-message" id="subErrMsg"></p>
                                 </div>
                             </div>
                             <div class="row">
@@ -373,12 +382,12 @@
                                             class="form-control md-textarea"></textarea>
                                         <label for="message">Your message</label>
                                     </div>
+                                    <p class="error-message" id="msgErrMsg"></p>
                                 </div>
                             </div>
                         </form>
                         <div class="text-center text-md-left">
-                            <a class="btn btn-primary"
-                                onclick="document.getElementById('contact-form').submit();">Send</a>
+                            <button id="sendBtn" onclick="signupBtn()" class="btn btn-primary">Send</button>
                         </div>
                         <div class="status"></div>
                     </div>
@@ -546,6 +555,50 @@
     </div>
     <script type="text/javascript"
         src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+    <script>
+
+        let nameE = document.getElementById("name");
+        let emailE = document.getElementById("email");
+        let subjectE = document.getElementById("subject");
+        let messageE = document.getElementById("message");
+        let nameErrMsgE = document.getElementById("nameErrMsg");
+        let emailErrMsgE = document.getElementById("emailErrMsg");
+        let subErrMsgE = document.getElementById("subErrMsg");
+        let msgErrMsgE = document.getElementById("msgErrMsg");
+        let sendBtnE = document.getElementById("sendBtn");
+
+        nameE.addEventListener("blur", function (event) {
+            if (event.target.value === "") {
+                nameErrMsgE.textContent = "Required*";
+            } else {
+                nameErrMsgE.textContent = "";
+            }
+        });
+
+        emailE.addEventListener("blur", function (event) {
+            if (event.target.value === "") {
+                emailErrMsgE.textContent = "Required*";
+            } else {
+                emailErrMsgE.textContent = "";
+            }
+        });
+
+        subjectE.addEventListener("blur", function (event) {
+            if (event.target.value === "") {
+                subErrMsgE.textContent = "Required*";
+            } else {
+                subErrMsgE.textContent = "";
+            }
+        });
+
+        messageE.addEventListener("blur", function (event) {
+            if (event.target.value === "") {
+                msgErrMsgE.textContent = "Required*";
+            } else {
+                msgErrMsgE.textContent = "";
+            }
+        });
+    </script>
 </body>
 
 </html>
