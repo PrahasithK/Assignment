@@ -83,6 +83,11 @@
     height: 400px;
 }
 
+.ourImageLogoXs{
+    height: 400px;
+    width:100%;
+}
+
 .farmSectionBg {
     background-color: rgb(134, 128, 120);
 }
@@ -110,4 +115,10 @@
     color: #dc3545;
     font-family: "Roboto";
     font-size: 14px;
+}
+.readMoreBtn{
+    background-color:#006341;
+    border:0px;
+    height:40px;
+    width:120px;
 }
