@@ -1,5 +1,9 @@
 .gourmetLogo {
-    height: 60px;
+    height: 100px;
+}
+.navBar{
+    height:90px;
+    background-color: #006341;
 }
 
 .bannerSectionOurRecipe {
@@ -11,7 +15,7 @@
 
 .bannerSectionOurStory {
     background-position: center;
-    background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
+    background-image: url("https://cf-store.widencdn.net/mccormick/0/0/d/00d08c5b-5c05-4969-931d-b37c5a28de26.jpg?response-content-disposition=inline%3B%20filename%3D%22our_story_header3.jpg%22&Expires=1656312242&Signature=JPRx1wotqYXSfAM1zmJkD~jL8paXIJAbq8QTp8jlD3DSjcbwFtyEYz3k9AZxZMVgJyw7OkLnf1Zi5fHWWsGDVM-XALOtWdOHVg10QIdNYfJful192r8NjN5qkLxvb1PqONo7755GQgk3ERwPZGGK0su4543wEgVavi~NTecIzKKlBRrZqVnQyC4osAVYly8oxsFNg4NTCHYY17~4sY05v1fF6LPaPviJeKnBF1QgtAM1FnTjBONqJ~F~Go-~uMVE~frdNUq~GXJe2PMVNHMY2YQdSR6wRh-dwmoqdmosTSaItoCTkdJJmjJEXE84YtTB0sUJx2uYNnWJvb6vdW-4Lw__&Key-Pair-Id=APKAJD5XONOBVWWOA65A");
     background-size: cover;
     height: 80vh;
 }
@@ -79,6 +83,11 @@
     height: 400px;
 }
 
+.ourImageLogoXs{
+    height: 400px;
+    width:100%;
+}
+
 .farmSectionBg {
     background-color: rgb(134, 128, 120);
 }
@@ -106,4 +115,19 @@
     color: #dc3545;
     font-family: "Roboto";
     font-size: 14px;
+}
+.readMoreBtn{
+    background-color:#006341;
+    border:0px;
+    height:40px;
+    width:120px;
+}
+
+@media only screen and (max-width: 900px) {
+    .bg-toggle{
+     background-color:lightsteelblue; 
+   }
+}
+.ourStoryHeadings{
+    font-size: 25px;
 }
